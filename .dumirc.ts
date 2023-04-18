@@ -5,4 +5,14 @@ export default defineConfig({
   themeConfig: {
     name: 'antd-components',
   },
+  lessLoader: {
+    modifyVars: {
+      
+    },
+    javascriptEnabled: true,
+  },
+  resolve: {
+    docDirs: ['docs'],
+  },
+
 });

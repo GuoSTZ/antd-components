@@ -1,1 +1,3 @@
-export { default as Foo } from './Foo';
+import 'antd/dist/antd.less';
+
+export { default as Guide } from './Guide';
