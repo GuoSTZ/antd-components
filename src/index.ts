@@ -1,3 +1,3 @@
-import 'antd/dist/antd.less';
+import 'antd/dist/antd.css';
 
-export { default as Guide } from './Guide';
+export { default as McTimeline } from './McTimeline';

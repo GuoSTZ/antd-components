@@ -1,0 +1,58 @@
+.mc-time-line {
+  padding: 16px;
+  overflow: auto;
+  max-height: 336px;
+
+  .ant-timeline-item {
+    .ant-timeline-item-content {
+      margin-left: 32px;
+
+      > span {
+        color: #000;
+        font-weight: 500;
+
+        &:hover {
+          color: #3385ff;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &-description {
+    font-size: 12px;
+  }
+}
+
+.mc-time-line-tip {
+  .ant-tooltip-content {
+    .ant-tooltip-arrow {
+      &::before {
+        background-color: #fff;
+      }
+    }
+
+    .ant-tooltip-inner {
+      width: 350px;
+      background-color: #fff;
+
+      .ant-descriptions {
+        &-row {
+          .ant-descriptions-item {
+            white-space: nowrap;
+
+            &-label {
+              min-width: 120px;
+              text-align: right;
+              color: rgba(0, 0, 0, 50%);
+            }
+
+            &-content {
+              color: rgba(0, 0, 0, 85%);
+            }
+          }
+        }
+      }
+    }
+  }
+}
