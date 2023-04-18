@@ -21,7 +21,10 @@ export interface McTimelineProps extends TimelineProps {
 }
 
 export default (props: McTimelineProps) => {
-  const { items } = props;
+  const { items, className, ...restProps } = props;
+  const mergedClassName = className
+    ? `mc-time-line ${className}`
+    : 'mc-time-line';
 
   const renderTip = (data: TipType[] = []) => {
     return (
@@ -36,24 +39,22 @@ export default (props: McTimelineProps) => {
   };
 
   return (
-    <div className="mc-time-line">
-      <Timeline>
-        {items.map((item, idx) => {
-          const { content, tip, placement = 'rightTop', ...restItem } = item;
-          return (
-            <Timeline.Item key={idx} {...restItem}>
-              <Tooltip
-                overlayClassName="mc-time-line-tip"
-                title={renderTip(tip)}
-                placement={placement}
-              >
-                {content}
-              </Tooltip>
-              <div className="mc-time-line-description">{item.description}</div>
-            </Timeline.Item>
-          );
-        })}
-      </Timeline>
-    </div>
+    <Timeline className={mergedClassName} {...restProps}>
+      {items.map((item, idx) => {
+        const { content, tip, placement = 'rightTop', ...restItem } = item;
+        return (
+          <Timeline.Item key={idx} {...restItem}>
+            <Tooltip
+              overlayClassName="mc-time-line-tip"
+              title={renderTip(tip)}
+              placement={placement}
+            >
+              {content}
+            </Tooltip>
+            <div className="mc-time-line-description">{item.description}</div>
+          </Timeline.Item>
+        );
+      })}
+    </Timeline>
   );
 };
