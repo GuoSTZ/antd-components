@@ -45,6 +45,7 @@ export default (props: McTimelineProps) => {
         return (
           <Timeline.Item key={idx} {...restItem}>
             <Tooltip
+              visible
               overlayClassName="mc-time-line-tip"
               title={renderTip(tip)}
               placement={placement}

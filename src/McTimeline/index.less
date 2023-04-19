@@ -1,26 +1,49 @@
 .mc-time-line {
   padding: 16px;
   overflow: auto;
-  max-height: 336px;
+  max-height: 416px;
 
   .ant-timeline-item {
-    .ant-timeline-item-content {
+    padding: 0 0 46px;
+
+    &-tail {
+      top: 44px;
+      height: 48px;
+      border-left: 1px solid #e6e9f0;
+    }
+
+    &-head {
+      padding: unset;
+      top: 20px;
+    }
+
+    &-content {
+      top: 0;
       margin-left: 32px;
 
       > span {
-        color: #000;
-        font-weight: 500;
+        display: inline-block;
+        height: 24px;
+        margin-bottom: 4px;
+        font-size: 16px;
+        font-weight: 400;
+        color: #38415c;
+        line-height: 24px;
 
         &:hover {
           color: #3385ff;
           cursor: pointer;
         }
       }
-    }
-  }
 
-  &-description {
-    font-size: 12px;
+      > .mc-time-line-description {
+        height: 22px;
+        font-size: 14px;
+        font-weight: 400;
+        color: #82899e;
+        line-height: 22px;
+      }
+    }
   }
 }
 
@@ -33,22 +56,32 @@
     }
 
     .ant-tooltip-inner {
-      width: 350px;
+      min-width: 420px;
       background-color: #fff;
 
       .ant-descriptions {
         &-row {
           .ant-descriptions-item {
-            white-space: nowrap;
+            padding-bottom: 8px;
 
             &-label {
               min-width: 120px;
+              height: 22px;
+              font-size: 14px;
+              font-weight: 400;
+              color: #82899e;
+              line-height: 22px;
               text-align: right;
-              color: rgba(0, 0, 0, 50%);
+              vertical-align: top;
             }
 
             &-content {
-              color: rgba(0, 0, 0, 85%);
+              max-width: 280px;
+              height: 22px;
+              font-size: 14px;
+              font-weight: 400;
+              color: #38415c;
+              line-height: 22px;
             }
           }
         }
